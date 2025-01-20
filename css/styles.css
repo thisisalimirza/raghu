@@ -1195,6 +1195,17 @@ footer {
     opacity: 0.8;
 }
 
+.media-content p a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.media-content p a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
 /* Enhanced Podcast Section */
 .podcast-preview {
     text-align: center;
