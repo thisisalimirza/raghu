@@ -120,6 +120,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    margin-right: 2rem;
 }
 
 .nav-links {
@@ -845,6 +846,14 @@ footer {
     
     .interests-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .logo {
+        margin-right: 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
     }
 }
 
