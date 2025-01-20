@@ -60,7 +60,7 @@
             <div class="about-content">
                 <div class="about-grid">
                     <!-- Background Card -->
-                    <div class="about-card journey-card">
+                    <div class="about-card journey-card" onclick="openBioModal()">
                         <div class="card-icon">
                             <i class="fas fa-road"></i>
                         </div>
@@ -70,6 +70,7 @@
                             <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Columbus, OH</span>
                             <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Dallas, TX</span>
                         </div>
+                        <span class="read-more">Click to read more</span>
                     </div>
 
                     <!-- Education Card -->
@@ -294,6 +295,47 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bio Modal -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBioModal()">&times;</span>
+            <div class="modal-header">
+                <h2>My Journey</h2>
+            </div>
+            <div class="modal-body">
+                <div class="bio-section">
+                    <h3>Early Life & Education</h3>
+                    <p>Raghuram Reddy was born in Columbus, Ohio and grew up in Dallas, Texas. He graduated from the Texas Academy of Mathematics and Science. He later graduated from the University of Miami with a degree in microbiology and immunology in 2020.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Research Fellowship</h3>
+                    <p>He then spent a year as a National Institutes of Health Intramural Research Training Award Fellow conducting primary cilia research regarding glioblastoma and Parkinson's disease.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Current Studies</h3>
+                    <p>He is currently a third-year medical student at Florida International University Herbert Wertheim College of Medicine.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Research & Publications</h3>
+                    <p>His research interests include brain tumors, medical humanities, cancer, spine, and space medicine. He has reviewed for the American Medical Association of Journal of Medical Ethics, World Neurosurgery: X, and Family Medicine.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Professional Involvement</h3>
+                    <p>He is actively involved in improving healthcare policy as part of the Florida Medical Association and National Brain Tumor Society.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Personal Interests</h3>
+                    <p>Aside from medicine, his hobbies include spending time with family and friends, trying new restaurants and coffee shops, acrylic painting, outdoor activities, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

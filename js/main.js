@@ -1,3 +1,22 @@
+// Bio Modal Functions
+function openBioModal() {
+    const modal = document.getElementById('bioModal');
+    modal.style.display = 'block';
+    // Trigger reflow
+    modal.offsetHeight;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBioModal() {
+    const modal = document.getElementById('bioModal');
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 300);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Switching Functionality
     const themeSwitch = document.getElementById('theme-switch');
@@ -251,5 +270,27 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'all 0.6s ease-out';
         observer.observe(section);
+    });
+
+    // Add modal event listeners
+    const modal = document.getElementById('bioModal');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    if (closeBtn) {
+        closeBtn.onclick = closeBioModal;
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            closeBioModal();
+        }
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeBioModal();
+        }
     });
 }); 
